@@ -1,27 +1,20 @@
 import {
-  Container,
-  SimpleGrid,
   Image,
   Flex,
   Heading,
   Text,
   Stack,
-  StackDivider,
-  Icon,
   useColorModeValue,
   Grid,
   IconButton,
   Tooltip,
   useClipboard,
-  Link,
-  Center,
-  GridItem,
-} from "@chakra-ui/react";
+  Link
+} from "@mui/material";
 
 import myImage from "../assets/images/me.jpg";
-import { FaEnvelope, FaMobile, FaMobileAlt } from "react-icons/fa";
 import { BsGithub, BsTwitter, BsLinkedin, BsYoutube } from "react-icons/bs";
-import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 
 const Social = ({ link, label, icon: Icon }) => {
   return (
@@ -53,11 +46,11 @@ function Intro() {
         }}
         templateRows={{
           base: "1fr",
-          md: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
         }}
         spacing={5}
       >
-        <GridItem colSpan={1} rowSpan={2}>
+        <GridItem colSpan={1} rowSpan={3}>
           <Image
             padding={{ base: 5, md: 10 }}
             alt={"feature image"}
@@ -69,7 +62,7 @@ function Intro() {
         </GridItem>
         <GridItem
           colSpan={3}
-          rowSpan={1}
+          rowSpan={2}
           spacing={8}
           padding={{ base: 5, md: 10, lg: 30 }}
         >

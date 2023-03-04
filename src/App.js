@@ -7,16 +7,14 @@ import Portfolio from './components/portfolio';
 import Intro from './components/me';
 import Skills from './components/skills';
 
+import SkillTree from './components/skilltree';
+
 
 function App() {
   return (
-    <ChakraProvider >
-      <Nav />
-      <Intro />
-      <Skills />
-      <Footer />
-  </ChakraProvider>
+    
   );
+
 }
 
 export default App;
