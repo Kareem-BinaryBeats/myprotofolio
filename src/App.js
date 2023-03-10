@@ -1,20 +1,24 @@
-import logo from './logo.svg';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Main from "./components/me";
+import MyAppBar from "./components/navbar";
+import { blueGrey } from "@mui/material/colors";
+import { useState } from "react";
+import { Box, Container } from "@mui/system";
+import Skills from "./components/skills";
 
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import Nav from './components/navbar';
-import Footer from './components/footer';
-import Portfolio from './components/portfolio';
-import Intro from './components/me';
-import Skills from './components/skills';
-
-import SkillTree from './components/skilltree';
-
-
-function App() {
+export default function App() {
   return (
-    
+    <>
+      <MyAppBar />
+      <Container>
+        <Main />
+      </Container>
+      <Box sx={{ backgroundColor: blueGrey[100] }}>
+      <Container>
+      <Skills />
+      </Container>
+      </Box>
+    </>
   );
-
 }
-
-export default App;
