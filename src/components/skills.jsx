@@ -41,6 +41,7 @@ import {
 import { TiFlowSwitch } from "react-icons/ti";
 import { BsGit, BsCodeSlash } from "react-icons/bs";
 import { MdOutlineSensors } from "react-icons/md";
+import { Element } from "react-scroll";
 
 export default function Skills() {
   const Timecomp = ({ Timedot, TimeContent }) => {
@@ -56,9 +57,9 @@ export default function Skills() {
     );
   };
   return (
-    <>
+    <Element name="Tech Skills">
       <Typography py={5} variant="h2" align="center">
-        Skills
+       Technical Skills
       </Typography>
 
       <Grid container direction={{ xs: "column", md: "row" }}>
@@ -332,6 +333,6 @@ export default function Skills() {
           </Timeline>
         </Grid>
       </Grid>
-    </>
+    </Element>
   );
 }
