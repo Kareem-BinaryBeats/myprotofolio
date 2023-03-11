@@ -55,11 +55,12 @@ function Main() {
             />
           </Grid>
           <Grid item xs={8}>
-            <Box>
-              <Typography variant="h4">Kareem Ashraf</Typography>
+            <Box  my ={5}>
+              <Typography variant="h3" sx={{ fontWeight: 'bold' }}> Hello !</Typography>
+              <Typography variant="h3" color="primary" sx={{fontWeight:'bold'}}> I'am Kareem Ashraf </Typography>
             </Box>
             <Box>
-              <Typography variant="h6" align="justify" my>
+              <Typography variant="subtitle1" align="justify">
                 Digital Infrastucture Consultant / Developer with +13 years of
                 experience with roles ranging from operation support,
                 large-scale network design and Network Development, Strong

@@ -1,24 +1,37 @@
-import * as React from "react";
 import Button from "@mui/material/Button";
 import Main from "./components/me";
-import MyAppBar from "./components/navbar";
 import { blueGrey } from "@mui/material/colors";
-import { useState } from "react";
 import { Box, Container } from "@mui/system";
 import Skills from "./components/skills";
 
+import React, { useState } from "react";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ResponsiveAppBar from "./components/navbar";
+
 export default function App() {
+  const lightTheme = createTheme({
+    palette: {
+      mode: "light",
+      primary: {
+        main: "#f96100",
+        lightcus: '#ffd5bd',
+      },
+      secondary: {
+        main: "#0c0c0c",
+      },
+    },
+  });
   return (
-    <>
-      <MyAppBar />
+    <ThemeProvider theme={lightTheme}>
+     <ResponsiveAppBar />
       <Container>
         <Main />
       </Container>
-      <Box sx={{ backgroundColor: blueGrey[100] }}>
-      <Container>
-      <Skills />
-      </Container>
+      <Box sx={{ bgcolor: (theme) => theme.palette.primary.lightcus }}>
+        <Container>
+          <Skills />
+        </Container>
       </Box>
-    </>
+    </ThemeProvider>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React ,{useState} from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,32 +14,18 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 import { BsSun, BsMoonFill } from "react-icons/bs";
-import {TbMoodNerd} from "react-icons/tb"; 
+import { TbMoodNerd } from "react-icons/tb";
 import { blueGrey } from "@mui/material/colors";
 import { Link } from "react-scroll";
 
 const pages = ["Home", "Tech Skills", "Soft Skills", "Experiance"];
 
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
-
-const lightTheme = createTheme({
-  palette: {
-    mode: "light",
-  },
-});
-
-
 
 function ResponsiveAppBar() {
   const pages = ["Home", "Tech Skills", "Soft Skills", "Experiance"];
-  const [darkMode, setDarkMode] = useState(false);
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -57,8 +43,6 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <CssBaseline />
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -94,7 +78,14 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <Link to={page} smooth={true} duration={500} onClick={handleCloseNavMenu}>{page}</Link>
+                  <Link
+                    to={page}
+                    smooth={true}
+                    duration={500}
+                    onClick={handleCloseNavMenu}
+                  >
+                    {page}
+                  </Link>
                 ))}
               </Menu>
             </Box>
@@ -127,7 +118,7 @@ function ResponsiveAppBar() {
               ))}
             </Box>
 
-            <Box sx={{ flexGrow: 0 }}>
+            {/*<Box sx={{ flexGrow: 0 }}>
               <IconButton
                 color="inherit"
                 onClick={() => setDarkMode(!darkMode)}
@@ -137,11 +128,10 @@ function ResponsiveAppBar() {
             </Box>
             <Box sx={{ flexGrow: 0 }}>
               <Typography variant="h6">My App</Typography>
-            </Box>
+            </Box> */}
           </Toolbar>
         </Container>
       </AppBar>
-    </ThemeProvider>
   );
 }
 export default ResponsiveAppBar;
