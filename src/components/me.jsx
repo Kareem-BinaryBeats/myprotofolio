@@ -23,7 +23,7 @@ function Main() {
     return (
       <Grid item>
         <Tooltip title={label}>
-          <IconButton aria-label={label} color={"primary"} href={link}>
+          <IconButton aria-label={label} color={"primary"} href={link} target="_blank">
             {icon}
           </IconButton>
         </Tooltip>
@@ -81,7 +81,7 @@ function Main() {
             <Box>
               <Typography variant="h5" align="justify" color={grey[600]}>
               Datacenter Infrastructure Consultant , Network Automation and Orchestration Lead Consultant with +15 years of
-                experience in Data Networks Design, and Coding
+                experience in Datacenter and LAN Networks Design, and Coding
               </Typography>
             </Box>
             <Stack direction='row'>
@@ -92,7 +92,7 @@ function Main() {
               </Tooltip>
 
               <SocialIcon
-                link="https://www.youtube.com/channel/UCZ7O2hhJx4O2Xk8wKJMs-jw"
+                link="https://www.youtube.com/channel/UC7eeHsZI9UK0JCcCredpxmg"
                 label="visit my youtube channel"
                 icon={<BsYoutube size="35px" />}
               />
