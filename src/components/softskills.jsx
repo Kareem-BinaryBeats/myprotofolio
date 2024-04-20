@@ -65,7 +65,7 @@ function Soft() {
     );
   };
   return (
-    <Element name="Soft Skills">
+    <Element name="Certifications">
       <Box>
             <Typography py={2} variant="h3" align="center">
               Certifications
