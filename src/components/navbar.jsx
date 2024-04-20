@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-scroll";
 
 function ResponsiveAppBar() {
-  const pages = ["Home","Experiance", "Tech Skills",  "Certifications"];
+  const pages = ["Home","Me Talking","Experiance", "Tech Skills",  "Certifications"];
 
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
